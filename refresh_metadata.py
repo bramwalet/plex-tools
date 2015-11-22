@@ -24,7 +24,6 @@ def main(args):
                     timedelta = datetime.now() - item.addedAt
                     if timedelta.days < int(options.days):
                         print('+ Item should be refreshed')
-                        print item.key
                         item.refresh()
 
 class Options(object):
